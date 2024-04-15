@@ -1,0 +1,29 @@
+﻿@page "/counter"
+@using TestConvertChiffreRomain.Services;
+
+<h3>Convertir en chiffres romains</h3>
+
+<div>
+    <input type="number" @bind="Nombre" /><br />
+
+    @if (Resultat != null)
+        {
+        <div>Le nombre @Nombre en chiffres romains est : @Resultat</div>
+        }
+        <br/>
+    <button class="btn btn-primary" @onclick="Convertir">Convertir</button>
+</div>
+
+
+
+@code {
+
+    private int Nombre { get; set; }
+    private string? Resultat { get; set; }
+
+    private void Convertir() {
+
+    Resultat = ConvertisseurChiffresRomains.ConvertirEnChiffresRomains(Nombre);
+}
+    
+}
