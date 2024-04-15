@@ -20,6 +20,6 @@
 }
 
 Console.WriteLine("Entrez un nombre à convertir en chiffres romains :");
-int nombre = int.Parse(s: Console.ReadLine());
+int nombre = int.Parse(Console.ReadLine());
 string chiffreRomain = ConvertirEnChiffreRomain(nombre);
 Console.WriteLine($"Le nombre {nombre} en chiffres romains est : {chiffreRomain}");
